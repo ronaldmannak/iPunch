@@ -39,6 +39,9 @@
 		F8FA2C131791D47400AEBB46 /* REMCompileOnlineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C121791D47400AEBB46 /* REMCompileOnlineClient.m */; };
 		F8FA2C171791D7EA00AEBB46 /* REMFortranViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C161791D7EA00AEBB46 /* REMFortranViewController.m */; };
 		F8FA2C1B1791DEF000AEBB46 /* UIAlertView+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C1A1791DEF000AEBB46 /* UIAlertView+Error.m */; };
+		F8FA2C1E1792036900AEBB46 /* REMHollerith.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C1D1792036900AEBB46 /* REMHollerith.m */; };
+		F8FA2C211792079C00AEBB46 /* REMHollerithNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C201792079C00AEBB46 /* REMHollerithNumber.m */; };
+		F8FA2C2417921C7700AEBB46 /* REMHollerithNumberIBMModel029.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C2317921C7700AEBB46 /* REMHollerithNumberIBMModel029.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,12 @@
 		F8FA2C161791D7EA00AEBB46 /* REMFortranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMFortranViewController.m; path = iPunch/REMFortranViewController.m; sourceTree = "<group>"; };
 		F8FA2C191791DEF000AEBB46 /* UIAlertView+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Error.h"; path = "iPunch/UIAlertView+Error.h"; sourceTree = "<group>"; };
 		F8FA2C1A1791DEF000AEBB46 /* UIAlertView+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Error.m"; path = "iPunch/UIAlertView+Error.m"; sourceTree = "<group>"; };
+		F8FA2C1C1792036900AEBB46 /* REMHollerith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REMHollerith.h; path = iPunch/REMHollerith.h; sourceTree = "<group>"; };
+		F8FA2C1D1792036900AEBB46 /* REMHollerith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMHollerith.m; path = iPunch/REMHollerith.m; sourceTree = "<group>"; };
+		F8FA2C1F1792079C00AEBB46 /* REMHollerithNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REMHollerithNumber.h; path = iPunch/REMHollerithNumber.h; sourceTree = "<group>"; };
+		F8FA2C201792079C00AEBB46 /* REMHollerithNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMHollerithNumber.m; path = iPunch/REMHollerithNumber.m; sourceTree = "<group>"; };
+		F8FA2C2217921C7700AEBB46 /* REMHollerithNumberIBMModel029.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMHollerithNumberIBMModel029.h; sourceTree = "<group>"; };
+		F8FA2C2317921C7700AEBB46 /* REMHollerithNumberIBMModel029.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMHollerithNumberIBMModel029.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +214,8 @@
 			children = (
 				F8FA2BE817912F8B00AEBB46 /* iPunchTests.h */,
 				F8FA2BE917912F8B00AEBB46 /* iPunchTests.m */,
+				F8FA2C2217921C7700AEBB46 /* REMHollerithNumberIBMModel029.h */,
+				F8FA2C2317921C7700AEBB46 /* REMHollerithNumberIBMModel029.m */,
 				F8FA2BE317912F8B00AEBB46 /* Supporting Files */,
 			);
 			path = iPunchTests;
@@ -240,6 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				F8FA2BCF17912F8B00AEBB46 /* iPunch.xcdatamodeld */,
+				F8FA2C1C1792036900AEBB46 /* REMHollerith.h */,
+				F8FA2C1D1792036900AEBB46 /* REMHollerith.m */,
+				F8FA2C1F1792079C00AEBB46 /* REMHollerithNumber.h */,
+				F8FA2C201792079C00AEBB46 /* REMHollerithNumber.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -435,6 +450,8 @@
 				F8FA2C131791D47400AEBB46 /* REMCompileOnlineClient.m in Sources */,
 				F8FA2C171791D7EA00AEBB46 /* REMFortranViewController.m in Sources */,
 				F8FA2C1B1791DEF000AEBB46 /* UIAlertView+Error.m in Sources */,
+				F8FA2C1E1792036900AEBB46 /* REMHollerith.m in Sources */,
+				F8FA2C211792079C00AEBB46 /* REMHollerithNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FA2BEA17912F8B00AEBB46 /* iPunchTests.m in Sources */,
+				F8FA2C2417921C7700AEBB46 /* REMHollerithNumberIBMModel029.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

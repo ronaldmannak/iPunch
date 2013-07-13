@@ -1,14 +1,14 @@
 //
-//  iPunchTests.m
-//  iPunchTests
+//  REMHollerithNumberIBMModel029.m
+//  iPunch
 //
-//  Created by Ronald Mannak on 7/12/13.
+//  Created by Ronald Mannak on 7/13/13.
 //  Copyright (c) 2013 Ronald Mannak. All rights reserved.
 //
 
-#import "iPunchTests.h"
+#import "REMHollerithNumberIBMModel029.h"
 
-@implementation iPunchTests
+@implementation REMHollerithNumberIBMModel029
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-//    STFail(@"Unit tests are not implemented yet in iPunchTests");
+    STFail(@"Unit tests are not implemented yet in iPunchTests");
 }
 
 @end
