@@ -1,0 +1,1 @@
+../../StackMob/CoreData/Classes/SMCoreDataStore.h

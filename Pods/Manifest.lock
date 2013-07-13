@@ -1,0 +1,30 @@
+PODS:
+  - AFIncrementalStore (0.5.1):
+    - AFNetworking (>= 1.0)
+    - InflectorKit
+    - TransformerKit
+  - AFNetworking (1.3.1)
+  - CrittercismSDK (4.0.0)
+  - InflectorKit (0.0.1)
+  - Reveal-iOS-SDK (0.8.3)
+  - StackMob (2.0.0):
+    - AFNetworking (~> 1.1)
+  - TransformerKit (0.2.4)
+
+DEPENDENCIES:
+  - AFIncrementalStore
+  - AFNetworking
+  - CrittercismSDK
+  - Reveal-iOS-SDK
+  - StackMob
+
+SPEC CHECKSUMS:
+  AFIncrementalStore: 70c96af226a90291b86c5141a212ab340f2434e2
+  AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
+  CrittercismSDK: d130b5c590ff4e47552b17004299689a01c43a85
+  InflectorKit: 9dccab02f95541093995adac639342c9eb9e6c12
+  Reveal-iOS-SDK: 0d58ea01260eb109b924a09631d9cc8dd96e12c4
+  StackMob: f29bc549f4a01ac137c26db19b95f001936849c0
+  TransformerKit: 3c60759694b70d41b833dfe4005b031762d54e7f
+
+COCOAPODS: 0.22.2

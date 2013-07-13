@@ -1,0 +1,1 @@
+../../StackMob/Classes/SMOAuth2Client.h
