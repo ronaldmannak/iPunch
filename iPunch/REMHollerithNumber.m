@@ -33,7 +33,7 @@
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:12];
     for (int idx = 10; idx < 12; idx++) {
         int mask = 1<<idx;
-        if (intValue|mask) {
+        if (intValue&mask) {
             [array addObject:@"X"];
         } else {
             [array addObject:@"0"];
@@ -42,7 +42,7 @@
     
     for (int idx = 0; idx < 10 ; idx++) {
         int mask = 1<<idx;
-        if (intValue|mask) {
+        if (intValue&mask) {
             [array addObject:@"X"];
         } else {
             [array addObject:@"0"];

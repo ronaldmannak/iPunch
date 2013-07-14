@@ -45,6 +45,8 @@
 		F8FA2C2A17932E9000AEBB46 /* REMEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C2917932E9000AEBB46 /* REMEditorViewController.m */; };
 		F8FA2C2D17933A6D00AEBB46 /* PunchedCard.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA2C2B17933A6D00AEBB46 /* PunchedCard.png */; };
 		F8FA2C2E17933A6D00AEBB46 /* PunchedCard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA2C2C17933A6D00AEBB46 /* PunchedCard@2x.png */; };
+		F8FA2C3117934A7B00AEBB46 /* Punch.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA2C2F17934A7B00AEBB46 /* Punch.png */; };
+		F8FA2C3217934A7B00AEBB46 /* Punch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA2C3017934A7B00AEBB46 /* Punch@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		F8FA2C2917932E9000AEBB46 /* REMEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMEditorViewController.m; path = iPunch/REMEditorViewController.m; sourceTree = "<group>"; };
 		F8FA2C2B17933A6D00AEBB46 /* PunchedCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PunchedCard.png; path = iPunch/Assets/PunchedCard.png; sourceTree = "<group>"; };
 		F8FA2C2C17933A6D00AEBB46 /* PunchedCard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PunchedCard@2x.png"; path = "iPunch/Assets/PunchedCard@2x.png"; sourceTree = "<group>"; };
+		F8FA2C2F17934A7B00AEBB46 /* Punch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Punch.png; path = iPunch/Assets/Punch.png; sourceTree = "<group>"; };
+		F8FA2C3017934A7B00AEBB46 /* Punch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Punch@2x.png"; path = "iPunch/Assets/Punch@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,8 @@
 		F8FA2BF71791303B00AEBB46 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F8FA2C2F17934A7B00AEBB46 /* Punch.png */,
+				F8FA2C3017934A7B00AEBB46 /* Punch@2x.png */,
 				F8FA2C2B17933A6D00AEBB46 /* PunchedCard.png */,
 				F8FA2C2C17933A6D00AEBB46 /* PunchedCard@2x.png */,
 			);
@@ -391,6 +397,8 @@
 				F8FA2BFB179131B400AEBB46 /* iPad-Storyboard.storyboard in Resources */,
 				F8FA2C2D17933A6D00AEBB46 /* PunchedCard.png in Resources */,
 				F8FA2C2E17933A6D00AEBB46 /* PunchedCard@2x.png in Resources */,
+				F8FA2C3117934A7B00AEBB46 /* Punch.png in Resources */,
+				F8FA2C3217934A7B00AEBB46 /* Punch@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

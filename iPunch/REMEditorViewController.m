@@ -7,6 +7,7 @@
 //
 
 #import "REMEditorViewController.h"
+#import "REMHollerithNumber.h"
 
 @interface REMEditorViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *editor;
@@ -23,15 +24,34 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)updatePunchedCard:(NSArray *)array
+- (void)updatePunchedCard
 {
+    NSString *text = [self.editor.text uppercaseString];
+    NSMutableArray *hollerithRepresentation = [NSMutableArray arrayWithCapacity:80];
+    for (int idx = 0; idx < text.length; idx++) {
+        NSString *character = [NSString stringWithFormat:@"%C", [text characterAtIndex:idx]];
+        REMHollerithNumber *number = [REMHollerithNumber HollerithWithString:character encoding:HollerithEncodingIBMModel029];
+        [hollerithRepresentation addObject:number];
+    }
+    NSAssert([hollerithRepresentation count] == text.length, nil);
     
+    // Add graphics
+    [self.cardView.subviews makeObjectsPerformSelector:@selector(removeSubView:)];
+    
+    [hollerithRepresentation enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSArray *punchesArray = ((REMHollerithNumber *) obj).arrayValue;
+        NSLog(@"H: %@", punchesArray);
+//        for (NSString *punch in punchesArray)
+    }];
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+- (void)removeSubView: (UIView *)view
 {
-    NSLog(@"TEST");
-    return YES;
+    [view removeFromSuperview];
+}
+- (void)textViewDidChange:(UITextView *)textView
+{
+    [self updatePunchedCard];
 }
 
 @end
