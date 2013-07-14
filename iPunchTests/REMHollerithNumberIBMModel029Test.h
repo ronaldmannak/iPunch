@@ -1,5 +1,5 @@
 //
-//  REMHollerithNumberIBMModel029.h
+//  REMHollerithNumberIBMModel029Test.h
 //  iPunch
 //
 //  Created by Ronald Mannak on 7/13/13.
@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface REMHollerithNumberIBMModel029 : SenTestCase
+@interface REMHollerithNumberIBMModel029Test : SenTestCase
 
 @end
