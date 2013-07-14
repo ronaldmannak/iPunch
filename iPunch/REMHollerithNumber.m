@@ -27,6 +27,30 @@
     return NO;
 }
 
++ (NSArray *)createArrayFromNumber:(NSNumber *)number
+{
+    int intValue = [number intValue];
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:12];
+    for (int idx = 10; idx < 12; idx++) {
+        int mask = 1<<idx;
+        if (intValue|mask) {
+            [array addObject:@"X"];
+        } else {
+            [array addObject:@"0"];
+        }
+    }
+    
+    for (int idx = 0; idx < 10 ; idx++) {
+        int mask = 1<<idx;
+        if (intValue|mask) {
+            [array addObject:@"X"];
+        } else {
+            [array addObject:@"0"];
+        }
+    }
+    return array;
+}
+
 + (id)HollerithWithString:(NSString *)string
                  encoding:(HollerithEncoding)encoding
 {
@@ -244,10 +268,32 @@
     NSParameterAssert(string);
     NSNumber *value = self.hashTable[string];
     NSAssert(value, @"Can't find %@ in hash table %@", string, self.hashTable);
-    NSAssert(self.hashTable[string], nil);
+    int intValue = [value intValue];
     
-    return @[value];
+//    NSMutableArray *array = [NSMutableArray arrayWithCapacity:12];
+//    for (int idx = 10; idx < 12; idx++) {
+//        int mask = 1<<idx;
+//        if (intValue|mask) {
+//            [array addObject:@"X"];
+//        } else {
+//            [array addObject:@"0"];
+//        }
+//    }
+//    
+//    for (int idx = 0; idx < 10 ; idx++) {
+//        int mask = 1<<idx;
+//        if (intValue|mask) {
+//            [array addObject:@"X"];
+//        } else {
+//            [array addObject:@"0"];
+//        }
+//    }
+    
+//    return @[value];
+    return [REMHollerithNumber createArrayFromNumber:value];
+//    return array;
 }
+
 
 - (NSString *)arrayToString:(NSArray *)array
 {

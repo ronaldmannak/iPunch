@@ -42,6 +42,9 @@
 		F8FA2C1E1792036900AEBB46 /* REMHollerith.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C1D1792036900AEBB46 /* REMHollerith.m */; };
 		F8FA2C211792079C00AEBB46 /* REMHollerithNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C201792079C00AEBB46 /* REMHollerithNumber.m */; };
 		F8FA2C2717921DAF00AEBB46 /* REMHollerithNumberIBMModel029Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C2617921DAF00AEBB46 /* REMHollerithNumberIBMModel029Test.m */; };
+		F8FA2C2A17932E9000AEBB46 /* REMEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2C2917932E9000AEBB46 /* REMEditorViewController.m */; };
+		F8FA2C2D17933A6D00AEBB46 /* PunchedCard.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA2C2B17933A6D00AEBB46 /* PunchedCard.png */; };
+		F8FA2C2E17933A6D00AEBB46 /* PunchedCard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA2C2C17933A6D00AEBB46 /* PunchedCard@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,10 @@
 		F8FA2C201792079C00AEBB46 /* REMHollerithNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMHollerithNumber.m; path = iPunch/REMHollerithNumber.m; sourceTree = "<group>"; };
 		F8FA2C2517921DAF00AEBB46 /* REMHollerithNumberIBMModel029Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMHollerithNumberIBMModel029Test.h; sourceTree = "<group>"; };
 		F8FA2C2617921DAF00AEBB46 /* REMHollerithNumberIBMModel029Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMHollerithNumberIBMModel029Test.m; sourceTree = "<group>"; };
+		F8FA2C2817932E9000AEBB46 /* REMEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REMEditorViewController.h; path = iPunch/REMEditorViewController.h; sourceTree = "<group>"; };
+		F8FA2C2917932E9000AEBB46 /* REMEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMEditorViewController.m; path = iPunch/REMEditorViewController.m; sourceTree = "<group>"; };
+		F8FA2C2B17933A6D00AEBB46 /* PunchedCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PunchedCard.png; path = iPunch/Assets/PunchedCard.png; sourceTree = "<group>"; };
+		F8FA2C2C17933A6D00AEBB46 /* PunchedCard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PunchedCard@2x.png"; path = "iPunch/Assets/PunchedCard@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				F8FA2C141791D7C700AEBB46 /* Fortran Interpreter */,
+				F8FA2C2817932E9000AEBB46 /* REMEditorViewController.h */,
+				F8FA2C2917932E9000AEBB46 /* REMEditorViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -275,6 +284,8 @@
 		F8FA2BF71791303B00AEBB46 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F8FA2C2B17933A6D00AEBB46 /* PunchedCard.png */,
+				F8FA2C2C17933A6D00AEBB46 /* PunchedCard@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -378,6 +389,8 @@
 				F8FA2BCD17912F8B00AEBB46 /* Default-568h@2x.png in Resources */,
 				F8FA2BF91791319700AEBB46 /* iPhone-Storyboard.storyboard in Resources */,
 				F8FA2BFB179131B400AEBB46 /* iPad-Storyboard.storyboard in Resources */,
+				F8FA2C2D17933A6D00AEBB46 /* PunchedCard.png in Resources */,
+				F8FA2C2E17933A6D00AEBB46 /* PunchedCard@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +465,7 @@
 				F8FA2C1B1791DEF000AEBB46 /* UIAlertView+Error.m in Sources */,
 				F8FA2C1E1792036900AEBB46 /* REMHollerith.m in Sources */,
 				F8FA2C211792079C00AEBB46 /* REMHollerithNumber.m in Sources */,
+				F8FA2C2A17932E9000AEBB46 /* REMEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

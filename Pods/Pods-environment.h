@@ -30,6 +30,30 @@
 #define COCOAPODS_VERSION_MINOR_InflectorKit 0
 #define COCOAPODS_VERSION_PATCH_InflectorKit 1
 
+// JRSwizzle
+#define COCOAPODS_POD_AVAILABLE_JRSwizzle
+#define COCOAPODS_VERSION_MAJOR_JRSwizzle 1
+#define COCOAPODS_VERSION_MINOR_JRSwizzle 0
+#define COCOAPODS_VERSION_PATCH_JRSwizzle 0
+
+// ReactiveCocoa
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 1
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 9
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 5
+
+// ReactiveCocoa/Core
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 1
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 9
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 5
+
+// ReactiveCocoa/RACExtensions
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_RACExtensions
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_RACExtensions 1
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_RACExtensions 9
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_RACExtensions 5
+
 // Reveal-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Reveal_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Reveal_iOS_SDK 0
@@ -47,4 +71,28 @@
 #define COCOAPODS_VERSION_MAJOR_TransformerKit 0
 #define COCOAPODS_VERSION_MINOR_TransformerKit 2
 #define COCOAPODS_VERSION_PATCH_TransformerKit 4
+
+// libextobjc/EXTConcreteProtocol
+#define COCOAPODS_POD_AVAILABLE_libextobjc_EXTConcreteProtocol
+#define COCOAPODS_VERSION_MAJOR_libextobjc_EXTConcreteProtocol 0
+#define COCOAPODS_VERSION_MINOR_libextobjc_EXTConcreteProtocol 2
+#define COCOAPODS_VERSION_PATCH_libextobjc_EXTConcreteProtocol 5
+
+// libextobjc/EXTKeyPathCoding
+#define COCOAPODS_POD_AVAILABLE_libextobjc_EXTKeyPathCoding
+#define COCOAPODS_VERSION_MAJOR_libextobjc_EXTKeyPathCoding 0
+#define COCOAPODS_VERSION_MINOR_libextobjc_EXTKeyPathCoding 2
+#define COCOAPODS_VERSION_PATCH_libextobjc_EXTKeyPathCoding 5
+
+// libextobjc/EXTScope
+#define COCOAPODS_POD_AVAILABLE_libextobjc_EXTScope
+#define COCOAPODS_VERSION_MAJOR_libextobjc_EXTScope 0
+#define COCOAPODS_VERSION_MINOR_libextobjc_EXTScope 2
+#define COCOAPODS_VERSION_PATCH_libextobjc_EXTScope 5
+
+// libextobjc/RuntimeExtensions
+#define COCOAPODS_POD_AVAILABLE_libextobjc_RuntimeExtensions
+#define COCOAPODS_VERSION_MAJOR_libextobjc_RuntimeExtensions 0
+#define COCOAPODS_VERSION_MINOR_libextobjc_RuntimeExtensions 2
+#define COCOAPODS_VERSION_PATCH_libextobjc_RuntimeExtensions 5
 

@@ -6,6 +6,24 @@ PODS:
   - AFNetworking (1.3.1)
   - CrittercismSDK (4.0.0)
   - InflectorKit (0.0.1)
+  - JRSwizzle (1.0)
+  - libextobjc/EXTConcreteProtocol (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.2.5)
+  - ReactiveCocoa (1.9.5):
+    - ReactiveCocoa/Core
+    - ReactiveCocoa/RACExtensions
+  - ReactiveCocoa/Core (1.9.5):
+    - JRSwizzle (~> 1.0)
+    - libextobjc/EXTConcreteProtocol (~> 0.2.5)
+    - libextobjc/EXTKeyPathCoding (~> 0.2.5)
+    - libextobjc/EXTScope (~> 0.2.5)
+  - ReactiveCocoa/RACExtensions (1.9.5):
+    - ReactiveCocoa/Core
   - Reveal-iOS-SDK (0.8.3)
   - StackMob (2.0.0):
     - AFNetworking (~> 1.1)
@@ -15,6 +33,7 @@ DEPENDENCIES:
   - AFIncrementalStore
   - AFNetworking
   - CrittercismSDK
+  - ReactiveCocoa
   - Reveal-iOS-SDK
   - StackMob
 
@@ -23,6 +42,9 @@ SPEC CHECKSUMS:
   AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
   CrittercismSDK: d130b5c590ff4e47552b17004299689a01c43a85
   InflectorKit: 9dccab02f95541093995adac639342c9eb9e6c12
+  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
+  libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  ReactiveCocoa: 591f49bb58dc2756e4876d3c1c3df55730a05505
   Reveal-iOS-SDK: 0d58ea01260eb109b924a09631d9cc8dd96e12c4
   StackMob: f29bc549f4a01ac137c26db19b95f001936849c0
   TransformerKit: 3c60759694b70d41b833dfe4005b031762d54e7f

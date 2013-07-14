@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="Yh3-Fd-hlo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OXZ-vi-tSI">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-tc-VJi">
@@ -26,7 +26,6 @@
                             <constraint firstItem="aNL-tc-VJi" firstAttribute="leading" secondItem="OXZ-vi-tSI" secondAttribute="leading" constant="567" id="Uy8-z6-tjr"/>
                             <constraint firstAttribute="trailing" secondItem="aNL-tc-VJi" secondAttribute="trailing" constant="-222" id="qNv-Lp-qUg"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="xpk-1U-qs8"/>
                 </viewController>
@@ -46,19 +45,68 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Yh3-Fd-hlo" kind="relationship" relationship="rootViewController" id="J7U-bx-FHa"/>
+                        <segue destination="7jr-SG-pvV" kind="relationship" relationship="rootViewController" id="qbM-uB-6O1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFb-ok-4si" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-395" y="-300"/>
+            <point key="canvasLocation" x="-578" y="-300"/>
+        </scene>
+        <!--Editor View Controller-->
+        <scene sceneID="inc-YL-iUt">
+            <objects>
+                <viewController id="7jr-SG-pvV" customClass="REMEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="drJ-iQ-QOi">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-8N-mwy">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="478" id="Pap-x9-IlA"/>
+                                    <constraint firstAttribute="height" constant="267" id="v3C-NI-y1T"/>
+                                </constraints>
+                                <string key="text">program hello
+   Print *, "Hello World!"
+end program Hello</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7jr-SG-pvV" id="J4b-8z-4Gi"/>
+                                </connections>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PunchedCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-Qu-Efs"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lA-Ol-L4n"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gdd-Qu-Efs" firstAttribute="leading" secondItem="drJ-iQ-QOi" secondAttribute="leading" constant="500" id="39t-Sw-Zdi"/>
+                            <constraint firstItem="Gdd-Qu-Efs" firstAttribute="top" secondItem="8lA-Ol-L4n" secondAttribute="top" type="default" id="3Cr-sL-Rmy"/>
+                            <constraint firstItem="Gdd-Qu-Efs" firstAttribute="trailing" secondItem="8lA-Ol-L4n" secondAttribute="trailing" type="default" id="6Il-Mo-1tI"/>
+                            <constraint firstItem="hxl-8N-mwy" firstAttribute="leading" secondItem="drJ-iQ-QOi" secondAttribute="leading" type="default" id="IXO-Ms-B3d"/>
+                            <constraint firstItem="Gdd-Qu-Efs" firstAttribute="leading" secondItem="8lA-Ol-L4n" secondAttribute="leading" type="default" id="f1F-zV-B8h"/>
+                            <constraint firstItem="Gdd-Qu-Efs" firstAttribute="top" secondItem="drJ-iQ-QOi" secondAttribute="top" constant="40" id="f1u-Cx-Woo"/>
+                            <constraint firstItem="Gdd-Qu-Efs" firstAttribute="bottom" secondItem="8lA-Ol-L4n" secondAttribute="bottom" type="default" id="jIh-yR-gi5"/>
+                            <constraint firstItem="hxl-8N-mwy" firstAttribute="top" secondItem="drJ-iQ-QOi" secondAttribute="top" type="default" id="rnn-0f-CR4"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iso-hb-Sl0"/>
+                    <connections>
+                        <outlet property="cardView" destination="8lA-Ol-L4n" id="aiQ-ly-mod"/>
+                        <outlet property="editor" destination="hxl-8N-mwy" id="ENN-uA-9ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyo-QR-SvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335" y="593"/>
         </scene>
         <!--Fortran View Controller-->
         <scene sceneID="onz-TD-p5R">
             <objects>
                 <viewController id="aGH-m8-Ley" customClass="REMFortranViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0UP-yB-y0p">
-                        <rect key="frame" x="0.0" y="0.0" width="679" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="423" height="1164"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqQ-3M-taY">
@@ -110,7 +158,6 @@ end program Ipunch</string>
                             <constraint firstItem="OXI-Eh-MTq" firstAttribute="leading" secondItem="0UP-yB-y0p" secondAttribute="leading" type="default" id="nOA-Hz-aOW"/>
                             <constraint firstItem="yqQ-3M-taY" firstAttribute="leading" secondItem="0UP-yB-y0p" secondAttribute="leading" type="default" id="rQ5-4V-TpE"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
                     <connections>
@@ -124,6 +171,9 @@ end program Ipunch</string>
             <point key="canvasLocation" x="1127" y="746"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PunchedCard.png" width="510" height="240"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
