@@ -13,7 +13,6 @@
     NSString *_stringValue;
     NSArray *_arrayValue;
 }
-
 @property (nonatomic, strong) NSDictionary  *hashTable;
 @property (nonatomic, strong) NSString      *stringValue;
 @property (nonatomic, strong) NSArray       *arrayValue;
@@ -145,6 +144,8 @@
 {
     self = [super init];
     if (self) {
+        
+        /*
         NSString *hashString = @"&-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=\"¢.<(+|!$*);¬ ,%_>?";
         
         NSArray *hashValues = @[
@@ -157,12 +158,81 @@
             @(1<<2|1<<8|1<<11), @(1<<3|1<<8|1<<11), @(1<<4|1<<8|1<<11), @(1<<5|1<<8|1<<11), @(1<<6|1<<8|1<<11), @(1<<7|1<<8|1<<11),                // !$*];^
             @(1<<2|1<<8|1<<11), @(1<<3|1<<8|1<<11), @(1<<4|1<<8|1<<11), @(1<<5|1<<8|1<<11), @(1<<6|1<<8|1<<11), @(1<<7|1<<8|1<<11),                // ±,%v\¶
                                 ];
-        
         NSAssert([hashValues count] == [hashString length], nil);
+        
+        self.hashTable = [NSMutableDictionary dictionaryWithCapacity:hashValues.count];
         [hashValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *key = [NSString stringWithFormat:@"%c", [hashString characterAtIndex:idx]];
+            NSAssert(key, nil);
+            NSAssert(hashValues[idx], nil);
             [self.hashTable setValue:hashValues[idx] forKey:key];
-        }];
+        }]; */
+
+        self.hashTable = @{
+                           @"&": @(1<<12),
+                           @"-": @(1<<11),
+                           @"0": @(1<<0),
+                           @"1": @(1<<1),
+                           @"2": @(1<<2),
+                           @"3": @(1<<3),
+                           @"4": @(1<<4),
+                           @"5": @(1<<5),
+                           @"6": @(1<<6),
+                           @"7": @(1<<7),
+                           @"8": @(1<<8),
+                           @"9": @(1<<9),
+                           @"A": @(1<<1|1<<12),
+                           @"B": @(1<<2|1<<12),
+                           @"C": @(1<<3|1<<12),
+                           @"D": @(1<<4|1<<12),
+                           @"E": @(1<<5|1<<12),
+                           @"F": @(1<<6|1<<12),
+                           @"G": @(1<<7|1<<12),
+                           @"H": @(1<<8|1<<12),
+                           @"I": @(1<<9|1<<12),
+                           @"J": @(1<<1|1<<11),
+                           @"K": @(1<<2|1<<11), 
+                           @"L": @(1<<3|1<<11),
+                           @"M": @(1<<4|1<<11),
+                           @"N": @(1<<5|1<<11),
+                           @"O": @(1<<6|1<<11),
+                           @"P": @(1<<7|1<<11),
+                           @"Q": @(1<<8|1<<11),
+                           @"R": @(1<<9|1<<11),
+                           @"/": @(1<<1|1<<0),
+                           @"S": @(1<<2|1<<0),
+                           @"T": @(1<<3|1<<0),
+                           @"U": @(1<<4|1<<0),
+                           @"V": @(1<<5|1<<0),
+                           @"W": @(1<<6|1<<0),
+                           @"X": @(1<<7|1<<0),
+                           @"Y": @(1<<8|1<<0),
+                           @"Z": @(1<<9|1<<0),
+                           @":": @(1<<2|1<<8),
+                           @"#": @(1<<3|1<<8),
+                           @"@": @(1<<4|1<<8),
+                           @"'": @(1<<5|1<<8),
+                           @"=": @(1<<6|1<<8),
+                           @"\"": @(1<<7|1<<8),
+                           @"¢": @(1<<2|1<<8|1<<12),
+                           @".": @(1<<3|1<<8|1<<12),
+                           @"<": @(1<<4|1<<8|1<<12),
+                           @"(": @(1<<5|1<<8|1<<12),
+                           @"+": @(1<<6|1<<8|1<<12),
+                           @"|": @(1<<7|1<<8|1<<12), 
+                           @"!": @(1<<2|1<<8|1<<11),
+                           @"$": @(1<<3|1<<8|1<<11),
+                           @"*": @(1<<4|1<<8|1<<11),
+                           @")": @(1<<5|1<<8|1<<11),
+                           @";": @(1<<6|1<<8|1<<11),                                                             
+                           @"¬": @(1<<7|1<<8|1<<11),
+                           @" ": @(1<<2|1<<8|1<<0),
+                           @",": @(1<<3|1<<8|1<<0),
+                           @"%": @(1<<4|1<<8|1<<0),
+                           @"_": @(1<<5|1<<8|1<<0),
+                           @">": @(1<<6|1<<8|1<<0),
+                           @"?": @(1<<7|1<<8|1<<0),
+                           };
     }
     return self;
 }
@@ -171,7 +241,12 @@
 
 - (NSArray *)stringToArray:(NSString *)string
 {
-    return nil;
+    NSParameterAssert(string);
+    NSNumber *value = self.hashTable[string];
+    NSAssert(value, @"Can't find %@ in hash table %@", string, self.hashTable);
+    NSAssert(self.hashTable[string], nil);
+    
+    return @[value];
 }
 
 - (NSString *)arrayToString:(NSArray *)array

@@ -9,6 +9,11 @@
 #import "REMHollerithNumberIBMModel029Test.h"
 #import "REMHollerithNumber.h"
 
+@interface REMHollerithNumberIBMModel029Test ()
+@property (nonatomic, strong) NSArray *testArrays;
+@property (nonatomic, strong) NSArray *testStrings;
+@end
+
 @implementation REMHollerithNumberIBMModel029Test
 
 - (void)setUp
@@ -34,11 +39,28 @@
     STAssertEqualObjects([stringInit class], [REMHollerithNumberIBMModel029 class], nil);
 }
 
-- (void)testFromCardToReadableValue
+- (void)testIndividualString
 {
+    REMHollerithNumber *number = [REMHollerithNumber HollerithWithString:@"A" encoding:HollerithEncodingIBMModel029];
+    NSNumber *result = number.arrayValue[0];
+    STAssertEqualObjects(result, @(1<<12|1<<1), nil);
     
-//    REMHollerithNumber *number = [REMHollerithNumber HollerithWithArray:<#(NSArray *)#> encoding:<#(HollerithEncoding)#>]
+    number = [REMHollerithNumber HollerithWithString:@"<" encoding:HollerithEncodingIBMModel029];
+    result = number.arrayValue[0];
+    STAssertEqualObjects(result, @(1<<12|1<<8|1<<4), nil);
 }
+
+- (void)testFromStringToCard
+{
+    STAssertTrue(self.testArrays.count == self.testStrings.count, nil);
+    
+    [self.testStrings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        REMHollerithNumber *number = [REMHollerithNumber HollerithWithString: obj encoding:HollerithEncodingIBMModel029];
+        NSLog(@"number:%@", number.description);
+        STAssertEqualObjects([number.arrayValue[0] class], [self.testArrays[idx] class], @"arrayValue: %@ testArray: %@", [number.arrayValue class], [self.testArrays[idx] class]);
+        STAssertEqualObjects(number.arrayValue[0], self.testArrays[idx], @"Input: %@. Expected: %@ Received: %@", obj, self.testArrays[idx], number.arrayValue);
+    }];    
+} 
 
 - (void)testExample
 {
@@ -52,15 +74,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         testStrings = @[
-                       @"REMHollerithNumberBCD",
-                       @"REMHollerithNumberIBMModel026",
-                       @"REMHollerithNumberIBMModel026Reporting",
-                       @"REMHollerithNumberIBMModel026Fortran",
-                       @"REMHollerithNumberIBMModel029",
-                       @"REMHollerithNumberEBCDIC",
-                       @"REMHollerithNumberDEC",
-                       @"REMHollerithNumberGE",
-                       @"REMHollerithNumberUNIVAC",
+                       @"&",
+                       @"-",
+                       @"1",
+                       @"A",
+                       @"C",
+                       @"K",
+                       @"S",
+                       @"/",
+                       @"<",
+                       @"?",
+                       @";",
                        ];
     });
     return testStrings;
@@ -72,15 +96,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         testArrays = @[
-                        @"REMHollerithNumberBCD",
-                        @"REMHollerithNumberIBMModel026",
-                        @"REMHollerithNumberIBMModel026Reporting",
-                        @"REMHollerithNumberIBMModel026Fortran",
-                        @"REMHollerithNumberIBMModel029",
-                        @"REMHollerithNumberEBCDIC",
-                        @"REMHollerithNumberDEC",
-                        @"REMHollerithNumberGE",
-                        @"REMHollerithNumberUNIVAC",
+                       @(1<<12),            // &
+                       @(1<<11),            // -
+                       @(1<<1),             // 1
+                       @(1<<12|1<<1),       // A
+                       @(1<<12|1<<3),       // C
+                       @(1<<11|1<<2),       // K
+                       @(1<<0|1<<2),        // S
+                       @(1<<0|1<<1),        // /
+                       @(1<<12|1<<4|1<<8),  // <
+                       @(1<<0|1<<7|1<<8),   // ?
+                       @(1<<11|1<<6|1<<8),  // ;
                         ];
     });
     return testArrays;
